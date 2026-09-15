@@ -1,0 +1,1642 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 00:47:58 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>选课</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/academic/styles/frameV2/frame.css" rel="stylesheet" type="text/css">
+    <link href="/academic/styles/default/css/main.css" rel="stylesheet" type="text/css" />
+    <style>
+        table.form th,table.form td{font-size:14px;}
+        div.titlewrap .title{font-size:18px;}
+    </style>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/html" id="headertext">
+    <span>姓名: <span class="objectom">{{studentRealname}}</span></span> &nbsp;&nbsp;
+    <span>学号:<span class="objectom">{{studentUsername}}</span></span> &nbsp;&nbsp;
+     <span>班级:<span class="objectom">{{pubclassName}}</span></span>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/academic/logout_security_check">退出</a>
+</script>
+<script type="text/html" id="headertext_1500">
+    <span>姓名: <span class="objectom">{{studentRealname}}</span></span> &nbsp;&nbsp;
+    <span>学号:<span class="objectom">{{studentUsername}}</span></span> &nbsp;&nbsp;
+    <span>班级:<span class="objectom">{{pubclassName}}</span></span>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/academic/logout_security_check">退出</a>
+</script>
+
+<script type="text/html" id="courseArrangement">
+    {{if calist != undefined }}
+    {{each calist as data}}
+    <div>
+        {{if data.hourdistribution != null}}
+        <span class="hourdistribution">{{data.hourdistribution}}</span>
+        {{/if}}
+        {{if data.weeks != null}}
+        <span class="weeks">{{data.weeks}}</span>
+        {{/if}}
+        {{if data.section != null}}
+        <span class="section">{{data.section}}</span>
+        {{/if}}
+        {{if data.room != null}}
+        <span class="room">{{data.room}}</span>
+        {{/if}}
+    </div>
+    {{/each}}
+    {{/if}}
+    {{if calist == undefined }}
+    <div>
+        {{if data.hname != null}}
+        <span class="hourdistribution">{{data.hname}}</span>
+        {{/if}}
+        {{if data.weeks != null}}
+        <span class="weeks">{{data.weeks}}</span>
+        {{/if}}
+        {{if data.sectionname != null}}
+        <span class="section">{{data.sectionname}}</span>
+        {{/if}}
+        {{if data.rname != null}}
+        <span class="room">{{data.rname}}</span>
+        {{/if}}
+    </div>
+    {{/if}}
+</script>
+
+<script type="text/html" id="electivemgs">
+    <table cellspacing="0" cellpadding="0" class="form" >
+        <tr>
+            <td style="width:150px;">
+                本次选课
+                <br></td>
+            <td colspan="2">{{mgs.phase}}
+                当前选课状态:
+
+                {{if mgs.switchs == 0}}
+                    <span style="color:#339900;text-decoration:underline;font-weight:bold;">
+                {{/if}}
+                        {{if mgs.switchs==1}}
+             <span style="color:#ca0000;text-decoration:underline;font-weight:bold;">
+                 {{/if}}
+                 {{mgs.switchTxt}}</span>
+           &nbsp;&nbsp;
+             开始时间:{{mgs.stime}}
+          &nbsp;&nbsp;
+                  结束时间:{{mgs.etime}}
+
+        &nbsp;&nbsp;
+              {{if mgs.area==0}}
+                禁止跨校区选课
+                        {{/if}}
+                        {{if mgs.area==1}}
+                允许跨校区选课
+                        {{/if}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                选课人
+            </td>
+            <td colspan="2">
+                学号
+                :{{stuInfo.studentUsername}}&nbsp;&nbsp;
+                姓名
+                :{{stuInfo.studentRealname}}
+                &nbsp;&nbsp;
+                班级
+                :{{stuInfo.pubclassName}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                选课学分、门数限制
+            </td>
+            <td>
+                {{each mgs.limit as data}}
+                {{if data.creditmax != undefined }}
+                   
+                考试性质:{{data.eproperty}}
+                选课属性:{{data.courseprop}}
+                &lt;= <span style="color:#ca0000;"> {{data.creditmax}} </span>
+                学分
+                <br>
+                
+                {{/if}}
+                {{/each}}
+            </td>
+            <td>
+                {{each mgs.limit as data}}
+                {{if data.amountmax != undefined }}
+                
+                考试性质:{{data.eproperty}}
+                选课属性:{{data.courseprop}}
+                &lt;= <span style="color:#ca0000;"> {{data.amountmax}} </span>
+                门数
+                <br>
+                
+                {{/if}}
+                {{/each}}
+            </td>
+        </tr>
+        {{if mgs.electiveCreditRuleMemo != undefined}}
+        <tr>
+            <td>说明</td>
+            <td colspan="2">
+                {{mgs.electiveCreditRuleMemo}}
+            </td>
+        </tr>
+        {{/if}}
+        <tr>
+            <td>
+                已选课程
+            </td>
+            <td>
+               {{if showProp.mgroup}}
+                必修
+                已选学分
+                
+                <span id="mcr" style="color:#ca0000;">{{mgs.finshcourse.mcredit}}</span>
+
+                {{if mgs.finshcourse.mcreditEarned != ""}}
+                已获学分
+                <span id="mcre" style="color:#ca0000;">{{mgs.finshcourse.mcreditEarned}}</span>
+                {{/if}}
+                <br>
+                {{/if}}
+                {{if showProp.rgroup}}
+                限选
+                已选学分
+                <span id="rcr" style="color:#ca0000;">{{mgs.finshcourse.rcredit}}</span>
+                {{if mgs.finshcourse.rcreditEarned != ""}}
+                已获学分
+                <span id="mcre" style="color:#ca0000;">{{mgs.finshcourse.rcreditEarned}}</span>
+                {{/if}}
+                <br>
+                {{/if}}
+                {{if showProp.fgroup}}
+                任选
+                已选学分
+                <span id="fcr" style="color:#ca0000;">{{mgs.finshcourse.fcredit}}</span>
+                {{if mgs.finshcourse.fcreditEarned != ""}}
+                已获学分
+                <span id="mcre" style="color:#ca0000;">{{mgs.finshcourse.fcreditEarned}}</span>
+                {{/if}}
+                <br>
+                {{/if}}
+            </td>
+            <td>
+                {{if showProp.mgroup}}
+                必修
+                已选门数
+                <span id="mco" style="color:#ca0000;">{{mgs.finshcourse.mcount}}</span>
+
+                {{if mgs.finshcourse.mcountEarned != ""}}
+                已获门数
+                <span id="mcre" style="color:#ca0000;">{{mgs.finshcourse.mcountEarned}}</span>
+                {{/if}}
+                <br>
+                {{/if}}
+                {{if showProp.rgroup}}
+                限选
+                已选门数
+                <span id="rco" style="color:#ca0000;">{{mgs.finshcourse.rcount}}</span>
+                {{if mgs.finshcourse.rcountEarned != ""}}
+                已获门数
+                <span id="mcre" style="color:#ca0000;">{{mgs.finshcourse.rcountEarned}}</span>
+                {{/if}}
+                <br>
+                {{/if}}
+                {{if showProp.fgroup}}
+                任选
+                已选门数
+                <span id="fco" style="color:#ca0000;" >{{mgs.finshcourse.fcount}}</span>
+                {{if mgs.finshcourse.fcountEarned != ""}}
+                已获门数
+                <span id="mcre" style="color:#ca0000;">{{mgs.finshcourse.fcountEarned}}</span>
+                {{/if}}
+                <br>
+                {{/if}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                选课控制说明
+            </td>
+            <td colspan="2">
+                {{each mgs.selectcoursecontrol as data}}
+               {{ if data.prop != undefined}}
+                {{data.courseprop}} : {{data.remark}} <br>
+                 {{/if}}
+                {{/each}}
+                <input name="b2" type="button" value=" 查看选课说明"
+                       class="mybutton1"
+                       onclick="location.href='../../student/selectcoursedb/selectcoursehelp.doc'"/>&nbsp;
+            </td>
+        </tr>
+    </table>
+</script>
+
+
+<script type="text/html" id="electivemgs_1500">
+    <table cellspacing="0" cellpadding="0" class="form">
+        <tr>
+            <th>
+                学生
+            </th>
+            <td>
+                学号
+                :{{stuInfo.studentUsername}}&nbsp;&nbsp;
+                姓名
+                :{{stuInfo.studentRealname}}
+                &nbsp;&nbsp;
+                班级
+                :{{stuInfo.pubclassName}}
+            </td>
+        </tr>
+        <tr>
+            <th style="width:150px;">
+                本次选课
+            </th>
+            <td>{{mgs.phase}}
+                当前选课状态:
+
+                {{if mgs.switchs == 0}}
+                    <span style="color:#339900;text-decoration:underline;font-weight:bold;">
+                {{/if}}
+                        {{if mgs.switchs==1}}
+             <span style="color:#ca0000;text-decoration:underline;font-weight:bold;">
+                 {{/if}}
+                 {{mgs.switchTxt}}</span>
+          <span style="display:inline;font-weight:bold;color:red"> &nbsp;&nbsp;
+             开始时间:{{mgs.stime}}
+          &nbsp;&nbsp;
+                  结束时间:{{mgs.etime}}
+          </span>
+        &nbsp;&nbsp;
+              {{if mgs.area==0}}
+                禁止跨校区选课
+                        {{/if}}
+                        {{if mgs.area==1}}
+                允许跨校区选课
+                        {{/if}}
+            </td>
+        </tr>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr>
+            <th>课程修读情况</th>
+            <td><div id="ts"><a href="javascript:void(0)" onclick="showStatistics()" style="color:red;font-weight:bold;" >查看<img src="/academic/styles/default/image/icoexplain.gif" class="img"></a></div></td>
+        </tr>
+        <tr>
+            <th>
+                选课说明
+            </th>
+            <td>
+                {{each mgs.selectcoursecontrol as data}}
+                {{data.courseprop}} : {{data.remark}} <br>
+                {{/each}}
+                <input name="b2" type="button" value=" 查看选课说明"
+                       class="mybutton1"
+                       onclick="location.href='../../student/selectcoursedb/selectcoursehelp.doc'"/>&nbsp;
+            </td>
+        </tr>
+    </table>
+</script>
+
+<script type="text/html" id="electivestatistics">
+    <table>
+        {{each list as data}}
+        <tr>
+            <th>{{data.courseGroupName}}</th>
+            <td>门数要求:{{data.reqAmount}}</td>
+            <td>已通过门数:{{data.passedAmount}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</script>
+
+<script type="text/html" id="studentinfo">
+    <span>姓名: <span class="objectom">{{studentRealname}}</span></span> &nbsp;&nbsp;
+    <span>学号:<span class="objectom">{{studentUsername}}</span></span> &nbsp;&nbsp;
+    <span>班级:<span class="objectom">{{pubclassName}}</span></span>
+</script>
+
+<script type="text/html" id="fastscourse">
+    <table cellspacing="0" cellpadding="0" class="form">
+        <tr>
+            <th>课程号</th>
+            <td><input type="text" id="fastscpcourseid" name="pcourseid" class="input"></td>
+            <th>课序号</th>
+            <td><input type="text"  id="fastscseq" name="seq" maxlength="4" class="input"></td>
+        </tr>
+    </table>
+    <div class="buttonc">
+        <input type="button" class="button" value="选课" {{if canAdd != 0}} disabled="disabled"  {{/if}} onclick="fastAddSingleCourse()" />
+    </div>
+</script>
+
+<script type="text/html" id="schedulegroupgtat">
+    <table cellpadding="0" cellspacing="0" class="form schedulegroup">
+        {{each list as data}}
+        <tr>
+            <th colspan="4">{{data.name}}</th>
+        </tr>
+        <tr>
+            <td>学分要求</td>
+            <td>{{data.reqcredit}}</td>
+            <td>已选学分</td>
+            <td>{{data.credit}}</td>
+        </tr>
+        <tr>
+            <td>门数要求</td>
+            <td>{{data.reqamount}}</td>
+            <td>已选门数</td>
+            <td>{{data.count}}</td>
+        </tr>
+        {{/each}}
+        <tr>
+            <td colspan="4">
+                {{memo}}
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <div class="buttonc"><button onclick="closeLayer()">关闭</button></div>
+</script>
+
+<script type="text/html" id="coursepropmgs">
+    <table cellpadding="0" cellspacing="0" class="form" >
+        {{if datas.currulecredit}}
+        {{each datas.currulecredit as data}}
+            {{if data.epropertyname != undefined}}
+        <tr>
+            <td>
+                考试性质:{{data.epropertyname}}
+                选课属性:{{data.propname}} <= <span style="color:#ca0000;">{{data.creditmax}}</span>学分
+            </td>
+        </tr>
+            {{/if}}
+        {{/each}}
+        {{/if}}
+
+        {{if datas.curruleamount}}
+        {{each datas.curruleamount as data}}
+        {{if data.epropertyname != undefined}}
+        <tr>
+            <td>
+                考试性质:{{data.epropertyname}}
+                选课属性:{{data.propname}} <=  <span style="color:#ca0000;">{{data.amountmax}}</span>门
+            </td>
+        </tr>
+        {{/if}}
+        {{/each}}
+        {{/if}}
+
+        {{if datas.notrulecredit}}
+        <tr>
+            <td>
+                {{datas.notrulecredit.propname}}
+                已选学分: <span style="color:#ca0000;">{{datas.notrulecredit.credit}}</span>学分
+            </td>
+        </tr>
+        {{/if}}
+
+        {{if datas.notrulecount}}
+        <tr>
+            <td>
+                {{datas.notrulecount.propname}}
+                已选门数: <span style="color:#ca0000;">{{datas.notrulecount.count}}</span> 门
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+    <br /><br />
+    <div class="buttonc"><button onclick="closeLayer()">关闭</button></div>
+</script>
+
+
+</head>
+<body style="width:100%;margin:0;padding:0;">
+<div id="header">
+    <div class="header">
+        <div class="logo logo1008" style="height:82px;position:relative;">
+            <div class="electivestuinfo" id="stuinfo"></div>
+        </div>
+    </div>
+</div>
+<div class="menubar"  id="menubar">
+    <div class="electivenav">
+        
+
+<ul id="navbar">
+
+    
+        <li>
+        <a href="javascript:void(0)" name="courseprop"  data-prop="0"  title="2026秋 必修">必修选课</a>
+        
+        </li>
+    
+    
+    
+
+
+    <li><a href="javascript:void(0)"  id="finshcourse"  title="2026秋 已选课程"  >已选课程</a></li>
+
+
+
+
+
+
+    <li><a href="javascript:void(0)" id="showelectinfo" title="2026秋 选课">选课提示</a></li>
+
+
+
+    <li><a href="/academic/manager/electcourse/prefindcc.do" target="_blank" >全校开课查询</a></li>
+
+
+</ul>
+
+
+
+
+    </div>
+</div>
+<div class="electivebody">
+    <div class="titlewrap">
+        <span class="title" id="title"></span>
+    </div>
+    <div id="topInfo"></div>
+    <div id="bodyArea"></div>
+</div>
+
+<div class="electiveBtnWrap" id="electivefoot" style="display: none;">
+    
+    <button type="button"  class="electiveBtn_able" id="batchsubbtn" disabled="true" onclick='eletivePreAddCourse("multe")'>提交</button>
+    <span id="selectednum" style="display: none;">0</span>
+    <button type="button"  class="electiveBtn" id="showscgstat" onclick="showScheduleGroupStat()" >课组统计面板</button>
+    <button type="button"  class="electiveBtn" id="showscgmgs" onclick="showCourseMgs()" >选课提示</button>
+
+    <span id="countClassesNum">共计可选课程班数量:<em>0</em></span>
+</div>
+<div id="scedlist" style="display: none"></div>
+<script src="/academic/styles/js/jquery1.11.3.min.js"></script>
+<script src="/academic/styles/js/layer/layer.js"></script>
+<script type="text/javascript" src="/academic/styles/js/elective.js?_v=20221104" charset="utf-8"></script>
+<script src="/academic/styles/js/template.js" ></script>
+<script type="text/javascript">
+var schoolCode = parseInt("1008.0");
+var selectCourseTime = "5.0"
+var year = "46";
+var term = "2";
+var student = {"userid":"740151","realname":"测试用户","username":"2026000001","gender":"男","politicalStatusId":"1318","nationalityId":"1303","folkid":"1248","foreignLanguageId":"1411","entranceTypeId":"0","trainingModeId":"1374","stusourceId":"24459","postGraduateId":"0","languageLevelId":"0","characteristicId":"0","enrollTypeId":"0","classTypeId":"0","pubclassName":"集成26-1","classid":"30356","gradeid":"30082","departmentId":"811","majorId":"1063","directionId":"","studentAreaId":"712"};
+var batchMaxnum = parseInt("1.0");
+
+var propPage = -1;
+var jsonType;
+
+var scStuCourseJson;
+
+var scStuCourseFreeJson;
+
+var scCourseArrangementJson;
+
+var scCourseTeachingJson;
+
+var propRestrictionJson;
+
+var showOverflowCapability="";
+
+var showOverflowCapabilityFree = "";
+
+var area = 0;
+
+var studentAreaId="";
+
+var selectedCidList="";
+
+var canAdd="1";
+
+var isdel = "1" ;
+
+var adm_isdel = "1";
+
+var electiveFlag = true;
+
+var electcourse_FilePath = "/academic/tmpfile/";
+//var electcourse_FilePath = "../../student/selectcoursedb/";
+
+
+var scheduleGroupId = "";
+
+var captchaCode = true;
+
+var showSingleAddBtn =  true;
+
+var showCourseGroupStat = false;
+
+var showCourseDisplayMgs = true;
+
+var searchBar = true;
+
+var defaultShowClasses =  false;
+
+var filterFreeGroupList = "";
+
+
+filterFreeGroupList = filterFreeGroupList + "194160555,";
+
+filterFreeGroupList = filterFreeGroupList + "194160556,";
+
+filterFreeGroupList = filterFreeGroupList + "194160557,";
+
+filterFreeGroupList = filterFreeGroupList + "194160558,";
+
+filterFreeGroupList = filterFreeGroupList + "194160559";
+
+
+
+var tmpAddepid = [];
+
+var electivestatistics = "";
+var propGroupSelectMaxnum = "";
+
+var addCourseParmasJson = "";
+var electiveType = "";
+var indexlayer ;
+var classIdPropRestrictionArr = [];
+
+var isMobile = false;
+var attributes = {};
+var removeStuscFlag = false;
+
+var curClick = "";
+
+var showProp = {
+    mgroup:false,
+    rgroup:false,
+    fgroup:false
+};
+
+attributes = {
+    "scoreid":{"title":"","isAjax":false,"type":"string"},
+    "pcourseid":{"title":"课程号","isAjax":false,"type":"string"},
+    "coursename":{"title":"课程名称","isAjax":false,"type":"string"},
+    "cseq":{"title":"课序号","isAjax":false,"type":"string"},
+    "alias":{"title":"课程班别名","isAjax":false,"type":"string"},
+    "schedulegroupname":{"title":"课组","isAjax":false,"type":"string"},
+    "credit":{"title":"学分","isAjax":false,"type":"string"},
+    "depname":{"title":"开课单位","isAjax":false,"type":"string"},
+    "aname":{"title":"校区","isAjax":false,"type":"string"},
+    "exammanner":{"title":"考核方式","isAjax":false,"type":"string"},
+    "capability":{"title":"课容量","isAjax":true,"type":"number"},
+    "amount":{"title":"选课人数","isAjax":true,"type":"number"},
+    "overnum":{"title":"课余量","isAjax":true,"type":"number"},
+    "teachernames":{"title":"任课教师","isAjax":false,"type":"string"},
+    "classes":{"title":"合班","isAjax":false,"type":"string"},
+    "courseprop":{"title":"选课属性","isAjax":false,"type":"string"},
+    "arrangements":{"title":"课程安排","isAjax":true,"type":"string"},
+    "referencebook":{"title":"推荐教材","isAjax":false,"type":"string"},
+    "restriction":{"title":"选课限制","isAjax":false,"type":"string"},
+    "coursedemand":{"title":"课程要求","isAjax":false,"type":"string"},
+    "memo":{"title":"备注","isAjax":false,"type":"string"}
+};
+
+var scPropertyTitleMR = "depname,pcourseid,coursename,alias,teachernames,arrangements,capability,overnum";
+var scPropertyTitleF = "depname,pcourseid,coursename,alias,teachernames,arrangements,capability,overnum";
+var scPropertyTitleSED = "pcourseid,coursename,alias,teachernames,courseprop,arrangements";
+
+var headerInfo = {"schoolCode":schoolCode,"studentRealname":student.realname,"studentUsername":student.username,"pubclassName":student.pubclassName};
+
+$(function () {
+
+    $("#navbar>li>a[name='courseprop']").each(function(){
+        if($(this).data("prop") == "0")
+            showProp.mgroup = true;
+        else if($(this).data("prop") == "1")
+            showProp.rgroup = true;
+        else if($(this).data("prop") == "2")
+            showProp.fgroup = true;
+    });
+
+    $(".electivebody").addClass("school"+schoolCode);
+
+    $('#navbar > li').hover(function () {
+        $(this).children("a").addClass('navHover');
+        $(this).children("ul").css('display','block');
+        $('.navtreeBg').css('display','block');
+    }, function () {
+        $(this).children("a").removeClass('navHover');
+        $(this).children("ul").css('display','none');
+        $('.navtreeBg').css('display','none');
+    });
+
+
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        isMobile = true;
+    }
+
+    window.onscroll=function(){
+        var heightTop = document.documentElement.scrollTop || document.body.scrollTop;
+        // console.log(heightTop);
+        var menubar  = document.getElementById("menubar");
+        if(heightTop > 82){
+            document.getElementById("header").style.height = '117px';
+            menubar.style.position = 'fixed';
+            menubar.style.top = '0';
+            menubar.style.zIndex = '9999';
+        }else{
+            document.getElementById("header").style.height = '82px';
+            menubar.style.position = 'static';
+        }
+    };
+
+    selectCourseTime = selectCourseTime * 60;
+    var timer = setInterval(function(){
+        selectCourseTime --;
+        if(selectCourseTime < 1){
+            clearInterval(timer);
+            alertLayer("\u9009\u8BFE\u5DF2\u8D85\u65F6\uFF0C\u8BF7\u91CD\u65B0\u8FDB\u5165\uFF01");
+            location.href="/academic/logout_security_check";
+        }
+    },1000);
+
+
+    var html = theolTemplate("headertext",headerInfo);
+    $("#stuinfo").html(html);
+
+    if(scCourseArrangementJson == undefined){
+        jsonType = 3;
+        getJsonFile();
+    }
+//    if(scCourseTeachingJson == undefined){
+//        jsonType = 5;
+//        getJsonFile();
+//    }
+
+
+//    if(propRestrictionJson == undefined){
+//        jsonType = 4;
+//        getJsonFile();
+//    }
+
+
+    $("a[name='courseprop']").click(function(){
+        removeStuscFlag = false;
+        if(electiveFlag && curClick == "" ){
+            curClick = $(this).data("prop");
+            propPage = $(this).data("prop");
+            if($(this).data("sgid") != undefined && $(this).data("sgid") != "")
+                scheduleGroupId = $(this).data("sgid");
+            else
+                scheduleGroupId = "";
+            initscpage(this.title,propPage);
+            if(((propPage == 0 || propPage == 1) && scStuCourseJson != undefined) || (propPage == 2 && scStuCourseFreeJson != undefined)){
+                preShowElectScheduleCourseList();
+            }else{
+                jsonType = propPage;
+                getJsonFile();
+            }
+            showTopInfo(propPage);
+        }
+    });
+
+    $("#fastsccourse").click(function(){
+        initscpage(this.title);
+        propPage = -1;
+        var html = theolTemplate("fastscourse",{"canAdd":canAdd});
+        $("#bodyArea").html(html);
+        closeLayer();
+    });
+
+    $("#showelectinfo").click(function(){
+        initscpage(this.title);
+        propPage = -1;
+        $.ajax({
+                    url: "./electiveMgs.do",
+                    dataType:"json",
+                    cache:false,
+                    success:function(j){
+                        // console.log(j);
+//                        var jd = eval(j);
+//                        console.log(jd);
+                        var html = theolTemplate("electivemgs",{"mgs":j,"stuInfo":headerInfo,"showProp":showProp});
+                        $("#bodyArea").html(html);
+                        //$("#ts").html("\u516C\u5171\u57FA\u7840\u8BFE\u5E94\u4FEE\u8BFE\u7A0B\uFF1A9\u95E8        \u5DF2\u4FEE\u8BFE\u7A0B\uFF1A5\u95E8<br />                        \u4E13\u4E1A\u4EFB\u9009\u8BFE\u5E94\u4FEE\u8BFE\u7A0B\uFF1A4\u95E8        \u5DF2\u4FEE\u8BFE\u7A0B\uFF1A2\u95E8<br />                        \u4E13\u4E1A\u9650\u9009\u8BFE\u5E94\u4FEE\u8BFE\u7A0B\uFF1A7\u95E8        \u5DF2\u4FEE\u8BFE\u7A0B\uFF1A3\u95E8");
+                        closeLayer();
+                    },
+                    error:function(e){
+                        // console.log(e);
+                    }
+                }
+        );
+    }).click();
+
+    $("#finshcourse").click(function(){
+        if(scCourseTeachingJson == undefined){
+            jsonType = 5;
+            getJsonFile();
+        }else{
+            showFinshCourse();
+        }
+    });
+
+
+
+
+    $.ajax({
+        url: "./electiveStatus.do",
+        dataType:"json",
+        cache:false,
+        success:function(json){
+            //console.log(json);
+            if(json.status == 0){
+                electiveFlag = true;
+                showOverflowCapability = json.datas.showOverflowCapability;
+                showOverflowCapabilityFree = json.datas.showOverflowCapabilityFree;
+                area =  json.datas.area;
+                studentAreaId = json.datas.studentAreaId;
+                canAdd = json.datas.canAdd;
+                isdel =  json.datas.isdel;
+                adm_isdel =  json.datas.adm_isdel;
+            }else if(json.status == -1){
+                electiveFlag = false;
+                alertLayer(json.message,json.url);
+            }
+        }
+    });
+
+    // getStatistics();
+});
+
+function showFinshCourse(){
+    if(curClick == ""){
+        curClick = "finshCourse";
+        var thisTitile = "已选课程";
+        var html = theolTemplate("studentinfo",headerInfo);
+        removeStuscFlag = false;
+        $("#scedlist").html("<table id=\"scourse\" cellpadding=\"0\" cellspacing=\"0\"  class=\"electivetable\"><caption>"+html+"</caption></table><div class=\"buttonc\"><button onclick='closeLayer()'>关闭</button></div>");
+        $.ajax({
+            url: "./findElectiveFinshCourse.do",
+            cache:false,
+            dataType:"json",
+            success:function(jd){
+                //console.log(jd);
+                if(jd.status == 0){
+                    var param = {
+                        headTitle : attributes,
+                        showThList : scPropertyTitleSED,
+                        scCourseArrangementJsonData: scCourseArrangementJson,
+                        scCourseTeachingJsonData:scCourseTeachingJson,
+                        isdel:isdel,
+                        prop:"",
+                        refresh:false,
+                        adm_isdel:adm_isdel,
+                        jsonData:jd.datas
+                    };
+                    $("#scourse").finshCourseGrid(param);
+
+                    if(tmpAddepid.length>0){
+                        for(var i=0;i<tmpAddepid.length;i++){
+                            $("#stusc"+tmpAddepid[i]).addClass("selected");
+                        }
+                        tmpAddepid = [];
+                    }
+
+                    indexlayer = layer.open({
+                        type: 1,
+                        title: thisTitile,
+                        skin: 'layui-layer-rim',
+                        area: ['800px', '500px'],
+                        maxmin: true,
+                        content: $("#scedlist").html(),
+                        cancel: function(){
+                            //右上角关闭回调,根据是否有退课操作来刷新选课列表
+                            if(removeStuscFlag){
+                                showElectScheduleCourseList();
+                            }
+                        }
+                    });
+                    if(isMobile)
+                        layer.full(indexlayer);
+                }else if(jd.status == -1){
+                    alertLayer(jd.message,jd.url);
+                }
+                curClick = "";
+            },
+            error:function(){
+                curClick = "";
+            }
+        });
+        if(schoolCode==1007||schoolCode==1600)
+            $("#scedlist").append("<input type='button' onclick='electCoursePay()' value='查看学分缴费详细'/>");
+    }
+}
+
+function electCoursePay(){
+//    var scoreids = "";
+//    var chk = $("[name='scoreid']:checked");
+//    if(chk.length==0){
+//        alert("请至少选择一门课");
+//    }else{
+//        chk.each(function(){
+//            scoreids+=this.value+",";
+//        });
+//        window.location.href="../../customPort/studentElectCoursePay.do?scoreid="+scoreids;
+//    }
+    window.location.href="../../customPort/studentElectCoursePay.do";
+}
+
+function setTitleText(t){
+    $("#title").html(t);
+}
+function showLayer(){
+    indexlayer = layer.load(0,{
+        shade: [0.1,'#eee'] //0.1透明度的白色背景
+    });
+}
+function closeLayer(){
+    layer.close(indexlayer);
+    if(removeStuscFlag){
+        showElectScheduleCourseList();
+    }
+}
+
+function alertLayer(mgs,url,iconum){
+    var iconum = iconum != undefined ? iconum : 0;
+    layer.alert(mgs, {
+        skin: 'layui-layer-lan'
+        ,icon:iconum
+        ,closeBtn: 0
+        ,anim: 5 //动画类型
+    },function(index){
+        if(url != undefined && url != ""){
+            location.href=url;
+        }else{
+            layer.close(index);
+        }
+
+    });
+}
+
+function getJsonFile(callback){
+    var jsonUrl;
+    if(jsonType == 0 || jsonType == 1){
+        jsonUrl=electcourse_FilePath+ "s" + student.userid+".json";
+    }else if(jsonType == 2){
+        jsonUrl=electcourse_FilePath+"ScStuCourseFreeList.json";
+    }else if(jsonType == 3){
+        jsonUrl=electcourse_FilePath+"ScCourseArrangementList.json";
+    }else if(jsonType == 4){
+        jsonUrl=electcourse_FilePath+"ScStuCourseFreeRestrict.json";
+    }else if(jsonType == 5){
+        jsonUrl=electcourse_FilePath+"Schoolteaching.json";
+    }
+    //$.getScript(jsonUrl);
+    $.ajax({
+        url:jsonUrl,
+        dataType: "script",
+        //dataType: "jsonp",
+        contentType: 'text/json,charset=utf-8',
+        jsonpCallback: "jcallback",  //指定回调函数名称
+        success: function(){
+            //console.info("jcallback success");
+        },
+        error:function(){
+            // console.info("jcallback error");
+            //alertLayer("\u52A0\u8F7D\u5931\u8D25");
+            if(jsonType == 0 || jsonType == 1){
+                scStuCourseJson = "";
+                preShowElectScheduleCourseList();
+            }else if(jsonType == 2){
+                scStuCourseFreeJson = "";
+                preShowElectScheduleCourseList();
+            }else if(jsonType == 3){
+                scCourseArrangementJson = "";
+            }else if(jsonType == 4){
+                propRestrictionJson = "";
+                preShowElectScheduleCourseList();
+            }else if(jsonType == 5){
+                scCourseTeachingJson = "";
+                showFinshCourse();
+            }
+            closeLayer();
+        }
+    })
+}
+
+function jcallback(jsonData){
+    if(jsonType == 0 || jsonType == 1){
+        scStuCourseJson = jsonData;
+        preShowElectScheduleCourseList();
+    }else if(jsonType == 2){
+        scStuCourseFreeJson = jsonData;
+        preShowElectScheduleCourseList();
+    }else if(jsonType == 3){
+        //加载完课程安排后，接着加载课程班任课教师
+        scCourseArrangementJson = jsonData;
+        jsonType = 5;
+        getJsonFile();
+    }else if(jsonType == 4){
+        propRestrictionJson = jsonData;
+        if(jsonData !=undefined && jsonData.length > 0 ){
+            for(var i = 0,j = jsonData.length;i<j;i++){
+                var o = jsonData[i];
+                if(o.prop == "classid" && o.list.length > 0){
+                    for(var x = 0,y = o.list.length;x<y;x++){
+                        addClassIdPropRestriction(o.list[x]);
+                    }
+                    break;
+                }
+            }
+            propRestrictionJson = jsonData;
+            preShowElectScheduleCourseList();
+        }
+    }else if(jsonType == 5){
+        scCourseTeachingJson = jsonData;
+        //仅加载任课教师JSON
+        //showFinshCourse();
+    }
+}
+
+function addClassIdPropRestriction(o){
+    var f = true;
+    for(var i = 0,j = classIdPropRestrictionArr.length;i<j;i++){
+        var c = classIdPropRestrictionArr[i];
+        if(c.epid == o.epid){
+            f = false;
+            c.pushClassid(o.classid);
+            break;
+        }
+    }
+    if(f){
+        var newclass = new ClassIdPropRestriction(o.epid, o.status, o.classid);
+        classIdPropRestrictionArr.push(newclass);
+    }
+}
+
+function preShowElectScheduleCourseList(){
+    if(propRestrictionJson == undefined){
+        // console.log("start" + new Date());
+        jsonType = 4;
+        getJsonFile();
+    }else{
+        showElectScheduleCourseList();
+        closeLayer();
+    }
+}
+function showElectScheduleCourseList(){
+    if(propPage != -1){
+        var courseJson = scStuCourseJson;
+        var titleStr = scPropertyTitleMR;
+        var showOverflow = showOverflowCapability;
+        if(propPage == 2){
+            courseJson = scStuCourseFreeJson;
+            titleStr = scPropertyTitleF;
+            showOverflow = showOverflowCapabilityFree;
+        }
+        $("#bodyArea").html("").html("<table id=\"grid\" cellpadding=\"0\" cellspacing=\"0\" class=\"electivetable\"><caption>待选课程</caption></table>");
+        $.ajax({
+            url:"./findSelectedCidList.do",
+            data:{"prop":propPage},
+            cache:false,
+            success:function(selectedCidList){
+                var param = {
+                    headTitle : attributes,
+                    showThList:titleStr,
+                    selectedCidList:selectedCidList,
+                    prop:propPage,
+                    studentAreaId:studentAreaId,
+                    scCourseArrangementJsonData: scCourseArrangementJson,
+                    showOverflowCapability:showOverflow,
+                    canAdd:canAdd,
+                    schedulegroupid:scheduleGroupId,
+                    propRestrictionJson:propRestrictionJson,
+                    classIdPropRestrictionArr:classIdPropRestrictionArr,
+                    student:student,
+                    batchMaxnum:batchMaxnum,
+                    searchBar:searchBar,
+                    showSingleAddBtn:showSingleAddBtn,
+                    filterFreeGroupList:filterFreeGroupList,
+                    defaultShowClasses:defaultShowClasses,
+                    jsonData:courseJson
+                };
+                $("#grid").electiveGrid(param);
+                scheduleGroupId = "";
+                curClick = "";
+            },
+            error:function(){
+                curClick = "";
+            }
+        })
+    }
+}
+
+
+var result = [];
+
+function eletivePreAddCourse(type,parmasjson){
+    electiveType = type;
+    addCourseParmasJson = "";
+    if(parmasjson != undefined && parmasjson != "")
+        addCourseParmasJson = parmasjson;
+    else if(type == "multe"){
+        if($("#grid input[name='epid']:checked").size()>0){
+            $("#selectednum").text("0");
+            $("#batchsubbtn").removeClass("electiveBtn").addClass("electiveBtn_able").prop("disabled","disabled");
+            var array = new Array();
+            addCourseParmasJson = "{";
+            $("#grid input[name='epid']:checked").each(function(){
+                array.push($(this).val());
+            });
+            addCourseParmasJson = {"epid":array.join(",")};
+            //console.log(addCourseParmasJson);
+        }
+    }
+    if(captchaCode){
+        show_captcha();
+    }else{
+        electiveAddCourse();
+    }
+
+}
+
+function electiveAddCourse(){
+    showLayer();
+    if(addCourseParmasJson != ""){
+        $.ajax({
+            url:"./electiveSelectCourseAdd.do",
+            data:addCourseParmasJson,
+            dataType:"json",
+            cache:false,
+            success:function(j){
+                if(j.status == 0){
+                    closeLayer();
+                    showElectiveAddCourseResult(j);
+                }else{
+                    alertLayer("\u9009\u8bfe\u5931\u8d25");
+                    closeLayer();
+                }
+            },
+            error:function(){
+                alertLayer("\u9009\u8bfe\u5931\u8d25");
+                closeLayer();
+            }
+        });
+    }else{
+        closeLayer();
+    }
+}
+
+function showElectiveAddCourseResult(res){
+    if(addCourseParmasJson != ""){
+        if(res.result != undefined){
+            var j = res.result;
+            if(j.status == 0){
+                alertLayer(j.message,undefined,1);
+            }else{
+                alertLayer(j.message,undefined,2);
+            }
+            if(j.epid != undefined){
+                if(j.status == 0){
+                    filterCourse(j.epid);
+                    showTopInfo(propPage);
+                }else{
+                    $("#sc"+ j.epid).remove();
+                }
+                refreshCountClassesNum();
+            }
+        }else if(res.resultList != undefined){
+            var showHtml = "<table cellpadding=\"0\" cellspacing=\"0\" class=\"electivetable\" ><thead><tr><th width=\"40%\">课程名称</th><th>\u7ED3\u679C</th></tr></thead><tbody>";
+            var r = res.resultList;
+            for(var i=0;i< r.length;i++){
+                //console.log(r[i]);
+                showHtml = showHtml + "<tr><td class=\"padding25\">";
+                if(r[i].status  == 0){
+                    filterCourse(r[i].epid);
+                    showHtml = showHtml + "<span class=\"pass\">" + (r[i].coursename != undefined ? r[i].coursename : "") + "</span>";
+                }else{
+                    $("#sc"+r[i].epid).remove();
+                    showHtml = showHtml + "<span class=\"failed\">" +  (r[i].coursename != undefined ? r[i].coursename : "") + "</span>";
+                }
+
+                showHtml = showHtml + "</td><td class=\"padding25\">";
+                if(r[i].status == -1){
+                    showHtml = showHtml + "\u9009\u8bfe\u5931\u8d25";
+                }else{
+                    showHtml = showHtml + r[i].message;
+                }
+                showHtml = showHtml +"</td></tr>";
+            }
+            showHtml = showHtml + "</tbody></table>";
+            showTopInfo(propPage);
+            refreshCountClassesNum();
+            indexlayer = layer.open({
+                type: 1,
+                title: "\u7ED3\u679C",
+                skin: 'layui-layer-rim',
+                area: ['800px', '500px'],
+                maxmin:true,
+                content: showHtml
+            });
+            if(isMobile)
+                layer.full(indexlayer);
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function fastAddSingleCourse(){
+    var _pcourseid = $.trim($("#fastscpcourseid").val());
+    var _seq = $.trim($("#fastscseq").val());
+    if(_pcourseid == "" || _seq == ""){
+        alertLayer("\u8BFE\u7A0B\u53F7\u548C\u8BFE\u5E8F\u53F7\u5747\u4E0D\u53EF\u4E3A\u7A7A\uFF01");
+        closeLayer();
+        return ;
+    }
+    var r = /^\+?[1-9][0-9]*$/;
+    if(!r.test(_seq)){
+        alertLayer("\u8BFE\u5E8F\u53F7\u5FC5\u987B\u4E3A\u6B63\u6574\u6570\uFF01");
+        closeLayer();
+        return ;
+    }
+
+    eletivePreAddCourse("fast",{"pcourseid":_pcourseid,"seq":_seq});
+    //electiveAddSingleCourse(_pcourseid,_seq,undefined);
+}
+
+//function electiveAddSingleCourse(pcourseid,seq,epid){
+//function electiveAddSingleCourse(){
+//    showLayer();
+//    if(addCourseParmasJson != ""){
+//        var pcourseid = addCourseParmasJson.pcourseid;
+//        var seq = addCourseParmasJson.seq;
+//        var epid = addCourseParmasJson.epid != undefined ? addCourseParmasJson.epid : undefined ;
+//        // var courseJson = {"courseName":$("#coursename_"+$(this).val()).text()};
+//        $.ajax({
+//            url:"./electiveSelectCourseAdd.do",
+//            data:{"pcourseid":pcourseid,"seq":seq},
+//            dataType:"json",
+//            cache:false,
+//            success:function(j){
+//                if(j.status == 0){
+//                    alertLayer(j.message,undefined,1);
+//                }else{
+//                    alertLayer(j.message,undefined,2);
+//                }
+//                if(epid != undefined){
+//                    if(j.status == 0){
+//                        filterCourse(epid);
+//                        showTopInfo(propPage);
+//                    }else{
+//                        $("#sc"+epid).remove();
+//                    }
+//                }
+//                closeLayer();
+//                //courseJson =  $.extend(courseJson,j);
+//            },
+//            error:function(){
+//                alertLayer("\u9009\u8bfe\u5931\u8d25");
+//                closeLayer();
+//                // courseJson = $.extend(courseJson,{"status":-1,"message":"error"});
+//            }
+//        });
+//    }else{
+//        closeLayer();
+//    }
+//}
+
+
+function filterCourse(epid){
+    if(epid != undefined){
+        var courseStr = $("#sc"+epid).data("cid");
+        //console.log($("tr[data-cid="+courseStr+"]").size());
+        $("tr[data-cid='"+courseStr+"']").remove();
+    }
+}
+
+
+function removeStusc(epid,rollId,o,refresh){
+    var coursename = $(o).parent().parent().find("#finshcoursename_"+epid).text();
+    var removeFlag = true;
+    layer.confirm(coursename +",您确定要删除吗？", {
+        btn: ['确定','取消']
+    }, function(){
+        if(removeFlag){
+            removeFlag = false;
+            $.ajax({
+                url:"./electiveRemovestusc.do",
+                data:{"epid":epid,"rollId":rollId},
+                dataType:"json",
+                success:function(j){
+                    layer.alert(j.message, {
+                        skin: 'layui-layer-lan'
+                        ,icon:0
+                        ,closeBtn: 0
+                        ,anim: 5
+                    },function(index){
+                        layer.close(index);
+                        if(j.status == 0){
+                            $(o).parent().parent().remove();
+                            $("#stusc"+epid).remove();
+                            removeStuscFlag = true;
+                            if(refresh != null && refresh)
+                                showElectScheduleCourseList();
+                        }
+                    });
+
+                    
+                },
+                error:function(){
+                    alertLayer("\u9000\u8bfe\u5931\u8d25");
+                }
+            });
+        }
+    }, function(){
+    });
+}
+
+function initscpage(title,cprop){
+    showLayer();
+    $("#topInfo").html("");
+    setTitleText(title);
+    if(cprop != undefined && (batchMaxnum > 1 || showCourseGroupStat || showCourseDisplayMgs)){
+        $("#electivefoot").show();
+        $("#electivefoot > button").hide();
+        if(batchMaxnum > 1)
+            $("#batchsubbtn").show();
+        if(showCourseGroupStat)
+            $("#showscgstat").show();
+        if(showCourseDisplayMgs)
+            $("#showscgmgs").show();
+    }else{
+        $("#electivefoot").hide();
+    }
+}
+
+function showScheduleGroupStat(){
+    $.ajax({
+        url:"./findScheduleGroupStat.do",
+        data:{"propSc":propPage},
+        dataType:"json",
+        cache:false,
+        success:function(jd){
+            if(jd.status == 0){
+                var showHtml = theolTemplate("schedulegroupgtat",{"list":jd.datas.stuCourseGroupStatList,"memo":jd.datas.memo});
+                indexlayer = layer.open({
+                    type: 1,
+                    title: "按照课组统计历年已选学分、门数",
+                    skin: 'layui-layer-rim',
+                    area: ['800px', '500px'],
+                    maxmin:true,
+                    content: showHtml
+                });
+                if(isMobile)
+                    layer.full(indexlayer);
+            }else if(jd.status == -1){
+                alertLayer(jd.message,jd.url);
+            }
+        },
+        error:function(){
+            alertLayer("error");
+        }
+    });
+}
+
+function showCourseMgs(){
+    $.ajax({
+        url:"./findPropCourseMgs.do",
+        data:{"propSc":propPage},
+        dataType:"json",
+        cache:false,
+        success:function(jd){
+            if(jd.status == 0){
+                var showHtml = theolTemplate("coursepropmgs",{"datas":jd.datas});
+                indexlayer = layer.open({
+                    type: 1,
+                    title: "选课提示",
+                    skin: 'layui-layer-rim',
+                    area: ['800px', '500px'],
+                    maxmin:true,
+                    content: showHtml
+                });
+                if(isMobile)
+                    layer.full(indexlayer);
+            }else if(jd.status == -1){
+                alertLayer(jd.message,jd.url);
+            }
+        },
+        error:function(){
+            alertLayer("error");
+        }
+    });
+}
+
+function showStatistics(){
+    if(electivestatistics != ""){
+        var html = theolTemplate("electivestatistics",{"list":electivestatistics});
+        $("#ts").html(html);
+    }else{
+        $.ajax({
+            url: "./findCourseStatistics.do",
+            data:{"userid":"740151"},
+            dataType:"json",
+            cache:false,
+            success:function(j){
+                electivestatistics = j;
+                var html = theolTemplate("electivestatistics",{"list":electivestatistics});
+                $("#ts").html(html);
+            },
+            error:function(){
+                // $("#ts").html("");
+            }
+        });
+    }
+}
+
+function getStatistics(){
+    $.ajax({
+        url: "./findCourseStatistics.do",
+        data:{"userid":"740151"},
+        dataType:"json",
+        cache:false,
+        success:function(j){
+            electivestatistics = j;
+        },
+        error:function(){
+        }
+    });
+}
+
+
+function refreshCountClassesNum(){
+    $("#countClassesNum>em").text($("#grid tbody>tr:visible").size());
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var closeFlag;
+function closebeforeWin(){
+    event.returnValue="关闭当前窗口将退出系统？";
+    closeFlag = true;
+}
+
+function closeWin(){
+    // console.log(closeFlag);
+    if(closeFlag)
+        location.href="/academic/logout_security_check";
+}
+
+function showTopInfo(prop){
+    var caption = "已选必修课程";
+    if(prop == 1 )
+        caption = "已选限选课程";
+    else if(prop == 2)
+        caption = "已选任选课程";
+
+}
+
+//function closeLayer(){
+//    layer.closeAll();
+//}
+
+
+function show_captcha(){
+    var captchaHtml = "<div id=\"captcha\" >" +
+            "<div class=\"codeImg\"><img  id=\"jcaptcha\" onclick=\"refresh_jcaptcha()\" src=\"./getCaptcha.do\" alt=\"点击刷新验证码\"  style=\"cursor:pointer;\" width=\"150\" height=\"30\"/></div>" +
+            "<div class=\"codetext\"><input type=\"text\" placeholder=\"请输入验证码\" class=\"codeText\" id=\"jcaptchatext\" /></div>" +
+            "<div class=\"message\" id=\"message\"></div><div class=\"buttonc\"><button type=\"button\" onclick=\"validCaptcha()\"  class=\"electiveBtn\" >确定</button></div></div>";
+
+    indexlayer = layer.open({
+        type: 1,
+        title: "\u9A8C\u8BC1\u7801",
+        skin: 'layui-layer-rim',
+        area: ['300px', '150px'],
+        maxmin:true,
+        content: captchaHtml
+    });
+    refresh_jcaptcha();
+    if(isMobile)
+        layer.full(indexlayer);
+}
+function refresh_jcaptcha() {
+    var obj = document.getElementById("jcaptcha");
+    obj.src = "./getCaptcha.do?" + Math.random();
+}
+
+function validCaptcha() {
+    var v = $("#jcaptchatext").val();
+    var errDiv = $("#message");
+    if (v == null || v == "") {
+        errDiv.text("\u8bf7\u8f93\u5165\u9a8c\u8bc1\u7801\uff01");
+        return false;
+    }
+    $.ajax({
+        type:'post',
+        url:"./checkCaptcha.do?captchaCode=" + v,
+        dataType:'text',
+        success:function (data) {
+            if (data == "true") { //验证码输入正确
+                closeLayer();
+                electiveAddCourse();
+            } else {
+                errDiv.text("\u9a8c\u8bc1\u7801\u4e0d\u6b63\u786e\uff01");
+                $("img#jcaptcha").click();//更新验证码
+            }
+        }
+    });
+
+}
+
+</script>
+</body>
+</html>

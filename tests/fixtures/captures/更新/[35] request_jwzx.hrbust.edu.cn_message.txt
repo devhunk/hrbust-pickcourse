@@ -1,0 +1,12 @@
+POST /academic/manager/electcourse/checkCaptcha.do?captchaCode=277633 HTTP/1.1
+Host: jwzx.hrbust.edu.cn
+Content-Length: 0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
+Accept: text/plain, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+Origin: http://jwzx.hrbust.edu.cn
+Referer: http://jwzx.hrbust.edu.cn/academic/manager/electcourse/elective.do?
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=24175DD1DD38F82F5DD067457BCA315D.TA1
+

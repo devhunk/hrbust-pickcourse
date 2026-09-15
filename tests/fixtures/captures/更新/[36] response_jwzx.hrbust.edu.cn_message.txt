@@ -1,0 +1,56 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 05:01:53 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=UTF-8
+Content-Length: 503
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        {
+        "status":"0",
+        "result":
+        
+            
+                
+                    {
+                    "type":"1",
+                    "status":"0",
+                    "pcourseid":"730126TW01W1",
+                    "coursename":"体育-I",
+                    "epid":"234838946",
+                    "message":"选课成功"
+                    }
+                
+                
+                
+            
+        
+        }
+    
+    
+    
+

@@ -1,0 +1,476 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 00:47:54 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=GBK
+Content-Language: zh-CN
+Transfer-Encoding: chunked
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="/academic/styles/frameV2/frame.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/academic/styles/frameV2/jquery-1.2.3.pack.js" ></script>
+    <script type="text/javascript" src="/academic/styles/frameV2/changeFrame.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(
+                function(){
+                    menu("menu","cur","cur","slide");
+                    var heightVal = (document.body.clientHeight - 53) + "px";
+                    $('#menuWrap').css('height',heightVal);
+                    window.onresize = function(){
+                        var heightVal = (document.body.clientHeight - 53) + "px";
+                        $('#menuWrap').css('height',heightVal);
+                    }
+                }
+        );
+    </script>
+    <style type="text/css">
+        html,body{
+            scrollbar-3d-light-color:#FFF;
+            scrollbar-arrow-color:#fff;
+            scrollbar-base-color:#fff;
+            scrollbar-dark-shadow-color:#fff;
+            scrollbar-face-color:#6D5589;
+            scrollbar-highlight-color:#FFF;
+            scrollbar-shadow-color:#FFF;
+        }
+    </style>
+
+
+</head>
+
+<script type="text/javascript">
+    function leftListLoadFinish(){
+        window.parent.headerFrame.document.location.href="showHeader.do?randomString=20260915084754cIV9wj";
+    }
+</script>
+
+<body class="menuFrame" onload="leftListLoadFinish()">
+<div class="wrap" id="wrap">
+    <div id="date">
+        <p>
+            2026年09月15日 &nbsp;&nbsp;&nbsp;周二
+                    <span>2026秋
+                        
+                            第3周
+                        </span>
+        </p>
+    </div>
+
+    <div id="slideMenu">
+        <div class="menuWrap" id="menuWrap">
+            <ul id="menu">
+
+
+                
+                
+                    
+                        
+                            <li id="li0">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus210=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(210)" href="./accessModule.do?moduleId=210&groupId=&randomString=20260915084754RWSXX4" target="mainFrame" >
+                                    
+                                
+                                <span>教学计划管理</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                        
+                            
+                                <ul>
+                            
+                            <li>
+                                
+                                    
+                                    
+                                        <a href="./accessModule.do?moduleId=2070&groupId=&randomString=20260915084754hPGyfC" target="mainFrame">
+                                    
+                                
+                                <span>个人教学计划</span></a></li>
+                            
+            </ul></li>
+            
+            
+            
+            
+            
+                    
+                        
+                            <li id="li2">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus400=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(400)" href="./accessModule.do?moduleId=400&groupId=&randomString=202609150847541c6yUD" target="mainFrame" >
+                                    
+                                
+                                <span>校历安排</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li3">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus155=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(155)" href="./accessModule.do?moduleId=155&groupId=&randomString=2026091508475413PyGZ" target="mainFrame" >
+                                    
+                                
+                                <span>修改密码</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li4">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus202=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(202)" href="./accessModule.do?moduleId=202&groupId=&randomString=20260915084754JyEFZC" target="mainFrame" >
+                                    
+                                
+                                <span>课程查询</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li5">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus1070=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(1070)" href="./accessModule.do?moduleId=1070&groupId=&randomString=20260915084754hnlvtY" target="mainFrame" >
+                                    
+                                
+                                <span>教室查询</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li6">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus2060=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(2060)" href="./accessModule.do?moduleId=2060&groupId=&randomString=20260915084754DNxXl7" target="mainFrame" >
+                                    
+                                
+                                <span>学籍信息</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li7">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus2000=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(2000)" href="./accessModule.do?moduleId=2000&groupId=&randomString=20260915084754XLFRLr" target="mainFrame" >
+                                    
+                                
+                                <span>本学期课表</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li8">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus2050=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(2050)" href="./accessModule.do?moduleId=2050&groupId=&randomString=20260915084754ny3rWR" target="mainFrame" >
+                                    
+                                
+                                <span>学生选课</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li9">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus2010=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(2010)" href="./accessModule.do?moduleId=2010&groupId=&randomString=20260915084754tkjEhH" target="mainFrame" >
+                                    
+                                
+                                <span>重修重考报名</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li10">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus2030=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(2030)" href="./accessModule.do?moduleId=2030&groupId=&randomString=20260915084754wczoa6" target="mainFrame" >
+                                    
+                                
+                                <span>学生考试安排</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li11">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus2020=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(2020)" href="./accessModule.do?moduleId=2020&groupId=&randomString=20260915084754tUd2Fi" target="mainFrame" >
+                                    
+                                
+                                <span>个人成绩查询</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                        
+                            
+                                <ul>
+                            
+                            <li>
+                                
+                                    
+                                    
+                                        <a href="./accessModule.do?moduleId=2021&groupId=&randomString=20260915084754zal8Kq" target="mainFrame">
+                                    
+                                
+                                <span>课程成绩</span></a></li>
+                            
+            
+            
+            
+            
+                    
+                        
+                        
+                            
+                            <li>
+                                
+                                    
+                                    
+                                        <a href="./accessModule.do?moduleId=2022&groupId=&randomString=20260915084754cl3wcf" target="mainFrame">
+                                    
+                                
+                                <span>等级考试成绩</span></a></li>
+                            
+            </ul></li>
+            
+            
+            
+            
+            
+                    
+                        
+                            <li id="li14">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus506=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(506)" href="./accessModule.do?moduleId=506&groupId=&randomString=20260915084754Dpw1lz" target="mainFrame" >
+                                    
+                                
+                                <span>评估课程</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li15">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus508=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(508)" href="./accessModule.do?moduleId=508&groupId=&randomString=20260915084754FcBtBX" target="mainFrame" >
+                                    
+                                
+                                <span>教学评价</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li16">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus903=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(903)" href="./accessModule.do?moduleId=903&groupId=&randomString=20260915084754GPT1j4" target="mainFrame" >
+                                    
+                                
+                                <span>查询课程通知</span></a>
+                                
+                        
+                        
+            
+            
+                    
+                        
+                            <li id="li17">
+                                
+                                    
+                                    
+                                        <script type="text/javascript">
+
+                                            var moduleStatus2090=true;
+                                        </script>
+
+                                        <a  onClick="showInfo(2090)" href="./accessModule.do?moduleId=2090&groupId=&randomString=20260915084754HJsr1z" target="mainFrame" >
+                                    
+                                
+                                <span>等级考试报名</span></a>
+                                
+                        
+                        
+            
+            
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="sidebar">
+    <a href="#" title="点击收缩">sidebar</a>
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+    function showInfo(moduleid){
+    
+    }
+</script>
+</html>

@@ -1,0 +1,53 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 05:01:41 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=UTF-8
+Content-Length: 375
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        {
+        "status":0,
+        "datas":{
+        "phase":"1",
+        "switch":"0",
+        "isdel":"0",
+        "canAdd":"0",
+        "showOverflowCapability":"1.0",
+        "showOverflowCapabilityFree":"1.0",
+        "area":"0",
+        "adm_isdel":"0",
+        "studentAreaId":"712"
+        }
+        }
+    
+    
+    
+    
+    
+    
+    
+

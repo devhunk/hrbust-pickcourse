@@ -1,0 +1,501 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 00:48:18 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        {
+        "status":"0",
+        "datas":{
+        
+           "scheduleScoreList":[
+        
+            {
+            "epid":"234787716",
+            "scoreid":"234893538",
+            "pcourseid":"090526TW01W1",
+            "coursename":"大学英语-I",
+            "alias":"计算机26-A4",
+            "cseq":"64",
+            "credit":"2",
+            "exammanner":"集中（46）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"0",
+            "epdel":"0",
+            
+                
+                    "courseprop":"必修",
+                
+                
+                
+            
+            
+            "depname":"公共外语教研室",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"人文 、社科类（2026）",
+            "crgroupId":"234787716",
+            "commitor":"0"
+            },
+        
+            {
+            "epid":"233803264",
+            "scoreid":"234682505",
+            "pcourseid":"920226TW01W1",
+            "coursename":"军事理论",
+            "alias":"920226TW01W1",
+            "cseq":"12",
+            "credit":"2",
+            "exammanner":"分散（55）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"军事理论教研室",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"233803264",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"234522719",
+            "scoreid":"234677273",
+            "pcourseid":"920226TW02W1",
+            "coursename":"军事技能训练",
+            "alias":"920226TW02W1",
+            "cseq":"2",
+            "credit":"2",
+            "exammanner":"分散（五级分制）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"军事理论教研室",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"234522719",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"233894066",
+            "scoreid":"234672226",
+            "pcourseid":"920326DW01W1",
+            "coursename":"生涯发展与就业指导",
+            "alias":"920326DW01W1",
+            "cseq":"41",
+            "credit":"0.5",
+            "exammanner":"分散（55）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"生涯发展与就业指导教研室",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"233894066",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"233804162",
+            "scoreid":"234663784",
+            "pcourseid":"920226TW03W1",
+            "coursename":"国家安全教育",
+            "alias":"920226TW03W1",
+            "cseq":"12",
+            "credit":"1",
+            "exammanner":"分散（73）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"军事理论教研室",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"233804162",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"233856404",
+            "scoreid":"234663543",
+            "pcourseid":"920126TW01W1",
+            "coursename":"大学生心理健康教育-I",
+            "alias":"920126TW01W1",
+            "cseq":"133",
+            "credit":"1",
+            "exammanner":"分散（64）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"学生处办公室",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"233856404",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"233805343",
+            "scoreid":"234657810",
+            "pcourseid":"110626TW01W1",
+            "coursename":"形势与政策-I",
+            "alias":"110626TW01W1",
+            "cseq":"19",
+            "credit":"2",
+            "exammanner":"分散（73）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"形势与政策教研部",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"233805343",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"233810210",
+            "scoreid":"234645658",
+            "pcourseid":"110126TW01W1",
+            "coursename":"思想道德与法治",
+            "alias":"110126TW01W1",
+            "cseq":"22",
+            "credit":"3",
+            "exammanner":"分散（73）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"思想道德与法治教研部",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"233810210",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"234492292",
+            "scoreid":"234640773",
+            "pcourseid":"110326TW01W2",
+            "coursename":"中国近现代史纲要",
+            "alias":"110326TW01W2",
+            "cseq":"13",
+            "credit":"3",
+            "exammanner":"分散（73）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"中国近现代史纲要教研部",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"234492292",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"233809897",
+            "scoreid":"234584272",
+            "pcourseid":"080026TW01W1",
+            "coursename":"高等数学（一）-I",
+            "alias":"080026TW01W1",
+            "cseq":"15",
+            "credit":"5",
+            "exammanner":"集中（46）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"工科数学教学中心",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"233809897",
+            "commitor":"1"
+            },
+        
+            {
+            "epid":"233893557",
+            "scoreid":"234578652",
+            "pcourseid":"040026TW01W1",
+            "coursename":"计算思维与程序设计（C\/C++语言）",
+            "alias":"040026TW01W1",
+            "cseq":"21",
+            "credit":"2.5",
+            "exammanner":"集中（55）",
+
+            
+            
+                
+                    
+                        
+                    
+                
+            
+            
+            "teachernames":"",
+            "prop":"2",
+            "epdel":"0",
+            
+                
+                
+                
+                    "courseprop":"任选",
+                
+            
+            
+            "depname":"软件工程系",
+            "aname":"南区",
+            "referencebook":"",
+            "restriction":"",
+            "coursedemand":"未知",
+            "memo":"",
+            "schedulegroupname":"",
+            "crgroupId":"233893557",
+            "commitor":"1"
+            }
+        
+         ],
+         "visibleMap":{
+            "mVisible":"0",
+            "rVisible":"1",
+            "fVisible":"1"
+            }
+        
+      }
+        }
+    
+    
+    

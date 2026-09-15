@@ -1,0 +1,71 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 00:47:58 GMT
+Server: Apache
+Content-Type: text/html;charset=gbk
+Content-Length: 1320
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="../../styles/js/jquery1.11.3.min.js"></script>
+<link href="../../styles/default/css/text.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #overlay {
+        background: black;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: alpha(opacity = 50);
+        opacity: 0.5;
+    }
+
+    #overlay_content {
+        display: none;
+        text-align: left;
+        background: white;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        width: 700px;
+        height: auto;
+        border-radius: 5px;
+        padding: 10px;
+        margin-left: -350px;
+        box-shadow: 5px 5px 5px black;
+    }
+
+
+</style>
+<p>&nbsp; </p>
+
+<p>&nbsp; </p>
+
+<p>&nbsp; </p>
+
+<p align="center"><a target="_blank"
+                     style=""
+                     id="agreeProtocol" href="/academic/manager/electcourse/elective.do"><span></span>如果浏览器阻止弹出窗口，请点击此处打开选课窗口。</a></p>
+
+<form action="/academic/manager/electcourse/elective.do" method="get" target="_blank" name="sub" id="sub"></form>
+
+<script type="text/javascript">
+    document.getElementById("sub").submit();
+</script>
+
+<p>&nbsp; </p>
+
+<p>&nbsp; </p>
+
+<p>&nbsp; </p>

@@ -1,0 +1,10 @@
+HTTP/1.1 302 302
+Date: Tue, 15 Sep 2026 00:47:58 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache,no-store,max-age=0
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /academic/student/selectcoursedb/jumppage.jsp?randomString=20260915084754ny3rWR&groupId=&moduleId=2050
+Content-Type: text/html;charset=UTF-8
+Content-Length: 0
+

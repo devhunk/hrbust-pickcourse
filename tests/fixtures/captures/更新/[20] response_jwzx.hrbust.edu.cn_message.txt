@@ -1,0 +1,10 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 05:01:42 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache,no-store,max-age=0
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=UTF-8
+Content-Length: 1788
+
+[{"amount":32,"remainCapability":68,"courseCapability":100,"epid":233769768},{"amount":1342,"remainCapability":-1312,"courseCapability":30,"epid":233805668},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234818473},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234837907},{"amount":15,"remainCapability":22,"courseCapability":37,"epid":234837967},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234838027},{"amount":22,"remainCapability":15,"courseCapability":37,"epid":234838087},{"amount":28,"remainCapability":9,"courseCapability":37,"epid":234838147},{"amount":36,"remainCapability":1,"courseCapability":37,"epid":234838211},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234838273},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234838335},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234838460},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234838522},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234838584},{"amount":28,"remainCapability":9,"courseCapability":37,"epid":234838702},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234838762},{"amount":17,"remainCapability":20,"courseCapability":37,"epid":234838824},{"amount":6,"remainCapability":31,"courseCapability":37,"epid":234838886},{"amount":29,"remainCapability":9,"courseCapability":38,"epid":234838946},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234839006},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234839066},{"amount":2,"remainCapability":35,"courseCapability":37,"epid":234839126},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234839186},{"amount":37,"remainCapability":0,"courseCapability":37,"epid":234839246}]

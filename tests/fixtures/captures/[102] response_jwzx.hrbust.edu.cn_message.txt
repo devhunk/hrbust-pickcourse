@@ -1,0 +1,56 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 00:47:54 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=GBK
+Content-Length: 1244
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <title>综合教务管理系统</title>
+    <link href="/academic/styles/frameV2/frame.css" rel="stylesheet" type="text/css">
+</head>
+
+<frameset rows="128,*,26" cols="*" id="frameWrap" frameborder="no" border="0" framespacing="0">
+    <frame src="" scrolling="no" noresize="noresize" name="headerFrame" id="headerFrame"/><!-- src为空，由menuFrame的listLeft.do加载完成后指定showHeader.do -->
+    <frameset cols="191,*" id="_middleframeWrap" name="_middleframeWrap" border="0" frameborder="0" framespacing="0">
+        <frame src="listLeft.do?randomString=wkGNiZESJj" name="menuFrame" noresize="noresize" id="menuFrame" frameborder="0" scrolling="no"/>
+        <frame src="./checkPassword.do" id="mainFrame" name="mainFrame" frameborder="0" noresize="noresize" scrolling="auto"/>
+    </frameset>
+    <frame src="footer.jsp" scrolling="no" noresize="noresize" id="footerFrame"/>
+</frameset>
+
+<noframes>
+    <body>
+    此浏览器不支持框架，页面无法显示！
+    </body>
+</noframes>
+</html>

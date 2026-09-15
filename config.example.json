@@ -1,0 +1,18 @@
+{
+  "username": "",
+  "password": "",
+  "base_url": "http://jwzx.hrbust.edu.cn",
+  "entry_path": "/academic/manager/electcourse/elective.do",
+  "login_page_path": "/academic/common/security/login.jsp",
+  "captcha_path": "/academic/getCaptcha.do",
+  "captcha_check_path": "/academic/checkCaptcha.do",
+  "login_submit_path": "/academic/j_acegi_security_check",
+  "logout_path": "/academic/logout_security_check",
+  "referer": "http://jwzx.hrbust.edu.cn/academic/student/selectcoursedb/jumppage.jsp?groupId=&moduleId=2050",
+  "session_env": "JWZX_JSESSIONID",
+  "timeout_seconds": 10,
+  "poll_interval_seconds": 30,
+  "snapshot_dir": "snapshots",
+  "cookie_file": "state/session.cookies.txt",
+  "captcha_file": "state/captcha.jpg"
+}

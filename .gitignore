@@ -1,0 +1,30 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local configuration & secrets
+config.json
+.env
+*.env
+
+# Runtime state & exports
+state/
+snapshots/
+exports/
+*.log
+
+# Raw capture logs (contain plaintext passwords, sessions and student personal records)
+origin/
+
+# Large dataset downloads
+验证码集/图片/
+*.tmp
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+

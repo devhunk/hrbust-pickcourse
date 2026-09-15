@@ -1,0 +1,91 @@
+HTTP/1.1 200 200
+Date: Tue, 15 Sep 2026 05:01:41 GMT
+Server: Apache
+Pragma: No-cache
+Cache-Control: no-cache
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/html;charset=UTF-8
+Content-Length: 1001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"phase": "",
+"switchs":"",
+"switchTxt":"",
+"stime":"2026-09-15 08:00",
+"etime" : "2026-09-16 23:59",
+"area" :"0",
+"username":"",
+"realname":"",
+"pubclassname":"",
+
+"electiveCreditRuleMemo":"最多选1门", 
+
+"limit":[
+
+{}
+],
+"selectcoursecontrol":[
+
+    
+        {
+        "prop":"0",
+        "courseprop":"必修",
+        "remark":"按教学计划要求选课！！体育课按“课程班别名”选择专项！！"
+        },
+    
+
+    
+        {
+        "prop":"1",
+        "courseprop":"限选",
+        "remark":"按教学计划要求选课！！"
+        },
+    
+
+    
+        {
+        "prop":"2",
+        "courseprop":"任选",
+        "remark":"参考选课指南根据学分情况选课！！"
+        },
+    
+
+{}],
+"finshcourse":{
+    "mcredit":"24.0",
+    "rcredit":"",
+    "fcredit":"",
+    "mcount":"11",
+    "rcount":"",
+    "fcount":"",
+
+"mcreditEarned":"",
+"rcreditEarned":"",
+"fcreditEarned":"",
+"mcountEarned":"",
+"rcountEarned":"",
+"fcountEarned":""
+}
+}
